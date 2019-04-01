@@ -10,17 +10,23 @@
 #import "Multilanguage-Swift.h"
 
 @interface ViewController () <UITableViewDataSource>
+
 @property (nonatomic,strong)  UITableView *tableView;
+
 @property (nonatomic,strong)  LinkedList *list;
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     
     self.tableView.dataSource = self;
